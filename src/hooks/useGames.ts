@@ -1,5 +1,4 @@
 import type { GameQuery } from "../App";
-import SearchInput from "../compoments/SearchInput";
 import useData from "./useData";
 
 export interface Platform{
@@ -14,6 +13,7 @@ export interface Game {
   background_image: string;
   parent_platforms: {platform: Platform}[]
   metacritic: number;
+  rating_top: number;
 }
 
 const useGames= (gameQuery: GameQuery) => useData<Game>("/games", 
