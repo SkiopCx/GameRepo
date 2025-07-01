@@ -10,7 +10,7 @@ export interface Genre {
   image_background: string;
 }
 
-const apiClient = new APIClient<Platform>("/genres");
+const apiClient = new APIClient<Genre>("/genres");
 
 //const useGenres= () => useData<Genre>("/genres"); //call by using service
 
