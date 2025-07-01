@@ -45,4 +45,4 @@ const useGames = (gameQuery: GameQuery) =>
       }),
   });
 
-export default useGame;
+export default useGames;
