@@ -8,8 +8,10 @@ import useGameQueryStore from "../services/GameQueryStore";
 export interface Game {
   id: number;
   name: string;
+  slug: string;
   background_image: string;
   parent_platforms: { platform: Platform }[];
+  description_raw: string;
   metacritic: number;
   rating_top: number;
 }
@@ -31,7 +33,7 @@ const apiClient = new APIClient<Game>("/games");
     [gameQuery]
   );*/
 
-// Use useQuery of @tanstack/react-query
+// Use useInfiniteQuery of @tanstack/react-query
 const useGames = () => {
   const gameQuery = useGameQueryStore((s) => s.gameQuery);
 
