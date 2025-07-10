@@ -3,7 +3,7 @@ import type { FetchDataResponse } from "../services/api-client";
 import APIClient from "../services/api-client";
 import ms from "ms";
 import useGameQueryStore from "../services/GameQueryStore";
-import type { Game } from "../entities/Game";
+import type Game from "../entities/Game";
 
 const apiClient = new APIClient<Game>("/games");
 
